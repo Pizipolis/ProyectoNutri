@@ -1,0 +1,265 @@
+/* Luego de crear nuestro archivo css procedemos a realizar lo que llamamos reseteo css */
+/* Este reseteo sirve para restablecer todos los estilos y que nuestro contenido parta desde 0 */
+*{
+    margin: 0; /* el margin es la propiedad del margen en todas las etiquetas, es el espacio que se encuentra entre una etiqueta y otra */
+    padding: 0; /* el paddin es el espacio que se encuentra entre el margin y el contenido de la etiqueta */
+}
+
+/* Podemos integrar nuestras modificaciones de estilos por medio de los selectores, en este caso usamos un selector de etiqueta */
+body {
+    background-image: url(./img/fondo.jpeg);
+    background-size: 60%;
+}
+
+.menuInicio{
+    position: absolute;
+    top: 25%;
+    left: 45%;
+    text-align: center;
+
+}
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+li {
+    padding: 5px;
+}
+
+li:hover{
+    background-color: #15777c;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.logoCentral { /* tambien podemos usar las clases, estas de escriben con un punto seguido del nombre que le asignamos nosotros */
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.logoCentral img{
+    border: 1px;
+    border-style: solid;
+    border-radius: 50%;
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    visibility: visible;
+
+}
+.carrousel{
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.agenda{
+    width: 100%;
+}
+
+.flecha1, .flecha2{
+    position: absolute;
+    top: 45%;
+    width: 30px;
+}
+
+.flecha2{
+   left: 95%;
+   
+}
+.textEncima {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    width: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: small;
+}
+
+.contenedor{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.tituloSeccion{
+    position: relative;
+    width: 100%;
+}
+
+
+h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    margin-bottom: 20px;
+    background-color: black;
+    color: #22c2cb;
+    text-align: center;
+
+}
+
+.menu{
+    position: absolute;
+    left: -250px; 
+    top: 60%;   
+    background-color: #22c2cb;
+    transition: 0.5s;
+
+}
+
+.activo {
+    left: 0px;
+
+}
+
+.iconBurguer{
+    position: absolute;
+    width: 25px;
+    top: 5%;
+    left: 2%;
+    margin-left: 5px;
+    margin-right: 90%;
+    align-self: flex-start;
+    background-color: #22c2cb;
+    border: 2px;
+    border-style: solid;  
+
+}
+
+.parrafo {
+   text-align: center;
+   font-family: cursive;
+   font-size: medium;
+   font-style: oblique;
+   color: white;
+   padding: 20px;
+   margin: 20px;
+   background-color: #22c2cb;
+   border-radius: 10%;
+}
+
+.juli {
+    margin-left: 30%;
+    margin-right: 30%;
+    padding: 5px;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+.imgIso {
+    width: 35%;
+    border-radius: 30%;
+    border: 1px solid;
+    margin: 10px;
+    background-color:white;
+}
+
+.contenedor2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+article{
+    width: 50%;
+    font-size: small;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+
+}
+
+article:nth-child(even){
+    text-align:justify;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: #22c3cb;
+
+}
+
+article:nth-child(odd){
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    color: #22c2cb;
+    background-color: white;
+    border: 1px solid;
+}
+
+.redesContainer{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.753);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 20%;
+    border: 1px solid #22c2cb;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:small;
+}
+
+.mapaContainer {
+    text-align: center;
+    width: 500px;
+}
+
+.mapaContainer h3 {
+    background-color: rgba(255, 255, 255, 0.678);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    margin: 5px;
+}
+
+iframe{
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid;
+}
+
+form{ 
+    text-align: center;
+    width: 90%;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.815);
+    color: white;
+    border-radius: 10%;
+    padding: 10px;     
+}
+
+label{
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+
+
+input, textarea{
+    background-color: rgba(0, 0, 0, 0.726);
+    width: 90%;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+
+}
+
+.bn:hover {
+    background-color: rgba(255, 255, 255, 0.466);
+    cursor: pointer;
+}
+
+footer{
+    background-color: #22c3cba8;
+    text-align: center;
+    font-style: oblique;
+}

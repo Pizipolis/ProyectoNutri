@@ -1,0 +1,138 @@
+@media screen and (min-width:768px ) {
+    .logoCentral img {
+        width: 30%;
+    }
+
+    .agenda {
+        width: 100%;
+        height: 170px;
+    }
+
+    h1{
+        font-size: medium;
+    }
+    
+}
+
+@media screen and (min-width:1279px ) {
+    
+    body{
+        background-size: 15%;
+    }
+
+    .contenedor{
+        justify-content: center;
+    }
+
+    .logoCentral{
+        background: rgb(34,194,203);
+        background: linear-gradient(0deg, rgba(34,194,203,1) 0%, rgba(0,0,0,1) 100%);
+
+    }
+
+    .logoCentral img {
+        content: url(./img/4-logo-blanco.png);
+        width: 30%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        border: 2px solid;
+        border-radius: 20%;
+    }
+
+    .carrousel {
+        background-color: #22c2cb;
+    }
+
+    .agenda {
+        width: 70%;
+    }
+
+    h1{
+        font-size:larger;
+        margin-bottom: 0px;
+        padding: 10px;
+    }
+
+    .flecha1{
+        content: url(./img/bxs-chevron-left-circle.svg);
+    }
+
+    .flecha2{
+        content: url(./img/bxs-chevron-right-circle.svg);
+        left: 83%;
+    }
+
+    .contenedor {
+        margin: 0;
+    }
+
+    .parrafo {
+        width: 30%;
+        margin: 5px;
+        padding: 40px;
+    }
+
+    .juli {
+        content: url(./img/julian.jpeg);
+        width: 20%;
+        border-radius: 0px;
+        margin: 5%;
+        
+    }
+
+    .contenedor2{
+        justify-content: center;
+    }
+
+    .imgIso{
+        width: 20%;
+        margin: 20px;
+        background-color: #22c2cb;
+    }
+
+    article {
+        font-size: medium;
+        text-align: center;
+        width: 60%;
+    }
+    
+    .redesContainer{
+        width: 30%;
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+
+    .mapaContainer{
+        width: 100%;
+
+    }
+
+    iframe{
+        content: url("https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56496.00732472479!2d-64.28264342538706!3d-27.748131884343056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b515f42ccf4d7%3A0xd029dfc5acb5ff5c!2sLa%20Banda%2C%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1692583524548!5m2!1ses-419!2sar");
+        width: 800px;
+        height: 300px;
+        
+    }
+
+    form{
+        width: 30%;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 5%;
+    }
+
+    label, input, textarea{
+        padding: 10px;
+        width: 100%;
+    }
+
+    .bn{
+        width: 20%;
+    }
+
+    footer{
+        padding: 10px;
+    }
+
+
+}

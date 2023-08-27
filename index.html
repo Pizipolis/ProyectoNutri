@@ -1,0 +1,220 @@
+<!-- Primero que nada seleccionamos la estructura con la que vamos a trabajar colocando html:5 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Dentro de head ira toda esa informacion que interpreta el navegador pero que no se muestra al usuario, por ejemplo -->
+    <meta charset="UTF-8"> <!-- el grupo de caracteres que utilizaremos -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- caracteristicas del dispositivo objetivo -->
+    <title>Julian Nutricionista</title> <!-- Lo que se leera en la "solapa" (aunque esto si lo veremos ;) )-->
+    <link rel="stylesheet" href="./style.css"> <!-- los links que necesitemos vincular a nuestro archivo -->
+    <link rel="stylesheet" href="media.css">
+</head>
+
+<body>
+    <!-- Aqui dentro irá el contenido de nuestro bello proyecto -->
+    <header>
+        <!-- Comenzamos nuestra estructura semantica, aqui podemos colocar lo que ira en el encabezado por ejemplo 
+            publicidades, portadas, etc -->
+        <h1>Inicio</h1>
+        <!-- en mi caso colocare una imagen de un fondo texturado azul por medio de la etiqueta img -->
+        <!-- el atributo src indica la fuente o direccion de la imagen -->
+    </header>
+
+    <!-- Luego coloco la barra de navegacion, que dejare comentada porque quiero que aparezca oculta, lo manejare en js -->
+     <nav class="menuInicio">
+        <h3>Menu</h3> <!--  la barra de navegacion se estable por medio de esta etiqueta semantica-->
+        <ul> <!--en nuestro caso usaremos esta etiqueta que establece que seguira una lista-->
+            <li>Home</li> <!--con li colocaremos los elementos de esa lista-->
+            <li><a href="#sobreMi">Sobre Mi</a></li>
+            <li><a href="misServicios">Mis Servicios</a></li>
+            <li><a href="contactame">Contactame</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- Comenzamos nuestro contenido principal señalandolo por medio de la etiqueta main, el cual separare en secciones -->
+        <!-- home -->
+        <section> <!-- mi primera seccion contiene el menu oculto y unos tips -->
+            <div class="logoCentral">
+                <!-- la imagen la coloco en un div que usare como una caja contenedora para posteriormente agregarle estilos -->
+                <img src="./img/Logo.jpeg" alt="Logo de Julian Silva Nutricionista">
+                <!-- el atributo alt contiene un texto alternativo por si no funciona nuestra imagen :( -->
+            </div>
+            
+            <div class="carrousel">
+                <!-- como los tips son un conjunto de imagen y texto en un carrousel lo coloco dentro de un div contenedor -->
+                <img class="flecha1" src="./img/chevron-left-regular-24.png" alt="flecha izquierda">
+                <img class="agenda" src="./img/hoja.jpg" alt="imagen de una hoja rayada">
+                <!-- aqui va una imagen de una hoja tipo agenda -->
+                <div class="textEncima"><!-- dentro de este div, encerre el texto que contiene el tip -->
+                    <h3>Consejito del dia</h3><br><!-- esta etiqueta es para colocar un titulo pero no tan grande -->
+                    <p>Recordá beber al menos 2 1/2 L de agua por día</p> <!-- aqui iria el parrafo -->
+
+                </div>
+                <img class="flecha2" src="./img/chevron-right-regular-24.png" alt="flecha derecha">
+            </div>
+
+        </section><!-- aqui termina la primera seccion -->
+        <!-- Sobre Mi -->
+        <a name="sobreMi"></a>
+        <section class="contenedor">
+            <div class="tituloSeccion"><!-- comienza la segunda seccion que en este caso es Sobre Mi, una descripcion de nuestro nutri -->
+            <h1>Sobre Mi</h1><!-- aqui colocamos un titulo un poco mas grande que el primero que pusimos -->
+            <!-- primero coloco una imagen del icono del menu -->
+            <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="1">
+                <div class="menu" >
+                    <ul> 
+                        <li>Home</li> 
+                        <li>Sobre Mi</li>
+                        <li><a href="misServicios">Mis Servicios</a></li>
+                        <li><a href="contactame">Contactame</a></li>
+                    </ul>
+                </div>
+            </div>    
+                <img src="./img/juliancarnet.jpg" alt="Julian simpáticamente sentado " class="juli">
+            <div class="parrafo">
+                <!-- comenzamos el contenido, separado en parrafos -->
+                <p>Me llamo Julian Ernesto Silva, soy Licenciado en Nutrición titulado en la Universidad de mi ciudad
+                    natal.
+                    Mis áreas de especialidad se centran en el sobrepeso, obesidad y manejo nuctricional en cirugía
+                    bariátrica.
+                    Como tambien ciertas enfermedades como la Diabetes, Hipertensión, dislipidemias.</p>
+                <p>Actualmente me he dedicado a ampliar mi rango de alcance en cuanto a pacientes por lo que ofrezco
+                    servicios remotos y consultas virtuales para poder llegar a acompañar a mas personas en sus hábitos
+                    alimenticios
+                    en busca de un estilo de vida saludable.</p><br>
+                <p>Puedes seguirme en todas mis redes sociales (las encontraras en la sección Contáctame) subo contenido
+                    para promover el bienestar general en la vida diaria enfocado a la salud y nutrición.</p>
+
+            </div>
+            <!-- aqui termina la descripcion principañ, debajo coloco la imagen de Julian -->
+            <!-- ¿por que va debajo del texto la imagen? -->
+            <!-- porque recuerden que estamos hablando de etiquetas que se suceden una luego de la otra, entonces para poder 
+            colocar la imagen al costado primero tenemos que ordenar las estas etiquetas de manera eficiente -->
+
+
+
+            <!-- Al terminar la descripcion continuamos con la etiquetas de imagenes para dejar plasmado los titulos de nuestro profeional -->
+           
+        </section> <!-- terminamos la seccion Sobre mi, recuerden controlar el cierre de sus etiquetas -->
+        <!-- Mis Servicios -->
+        <a name="misServicios"></a>
+        <section class="contenedor"><!-- Aqui comenzamos la seccion de los servicios -->
+            <div class="tituloSeccion">
+                <h1>Mis Servicios</h1><!-- utilizamos nuevamente el titulo mas grande -->
+            <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="2">
+            <div class="menu" id="menu2">
+                <ul>
+                    <li>Home</li> 
+                    <li><a href="#sobreMi">Sobre Mi</a></li>
+                    <li><a href="misServicios">Mis Servicios</a></li>
+                    <li><a href="contactame">Contactame</a></li>
+                </ul>
+            </div>
+        </div>
+            <div class="contenedor2">
+                <img class="imgIso" src="./img/doctor-9.png" alt="Imagen isometrica de consultorio">
+            <!-- otra imagen mas, asi vamos acostumbrandonos -->
+            
+            <article>
+                <h2>Consultas Particulares</h2><br>
+                <!-- un titulo ni muy grande ni muy peque, repetiremos varias etiquetas vistas -->
+                <p>Puedes encontrarme todos los días en calle Donde Enchufa Nro 35, Ciudad de El Viento, Argentina de
+                    8:00hs
+                    a 13:00hs.</p>
+            </article>
+            <article>
+                <h2>Atención Virtual</h2><br>
+                <p>Todos los días, horarios semanales a acordar.</p>
+            </article>
+            <img class="imgIso" src="./img/coworking-a.png" alt="imagen isometrica de atencion virtual">
+            <img class="imgIso" src="./img/lunch-break-9.png" alt="Imagen isometrica de una agenda">
+            <article>
+                <h2>Planes Dietarios</h2><br>
+                <p>Especificos y ajustados a la necesidad y situación de cada paciente.</p>
+            </article>
+            <article>
+                <h2>Comunidades y grupos de apoyo</h2><br>
+                <p>En todas mis redes sociales y otras herramientas de colaboración digitales.</p>
+            </article>
+            <img class="imgIso" src="./img/macbook-1.png" alt="Imagen isometrica de Redes Sociales" class="imgMediana">
+        </div>
+
+        </section> <!-- y aqui finaliamos nuevamente otra seccion -->
+        <!-- Contactame -->
+        <a name="contactame"></a>
+        <section class="contenedor"><!-- iniciamos la ultima seccion, que sera de contacto -->
+            <div class="tituloSeccion">
+                <h1>Contactame</h1><!-- utilizamos nuevamente el titulo mas grande -->
+                <img id="3" src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer">
+                
+                <div id="menu3" class="menu">
+                <ul>
+                    <li>Home</li> 
+                    <li><a href="#sobreMi">Sobre Mi</a></li>
+                    <li><a href="misServicios">Mis Servicios</a></li>
+                    <li><a href="contactame">Contactame</a></li>
+                </ul>
+                </div>
+            </div>
+            <div class="redesContainer">
+                <div>
+                    <img class="wp" src="./img/whatsapp-logo-24.png" alt="icono de telefono">
+                    <h3>+543854196595</h3><br>
+                </div>
+                <div class="redesIcons">
+                    <h3>Sigueme en mis redes sociales</h3><br>
+                    <a href="https://www.instagram.com/">
+                    <img src="./img/instagram-logo-24.png" alt="Icono de Instagram">
+                    </a>
+                    <a href="https://discord.com/">
+                    <img src="./img/discord-alt-logo-24.png" alt="Icono de Discord">
+                </a>
+                <a href="https://www.facebook.com/">
+                    <img src="./img/facebook-square-logo-24.png" alt="Icono de Facebook">
+                </a>
+                <a href="https://www.youtube.com/watch?v=9hhMUT2U2L4">
+                <img src="./img/youtube-logo-24.png" alt="Icono de Youtube">
+                </a>
+                </div>
+            </div>
+            <div class="mapaContainer">
+            <h3>Envia un mensaje o visita mi consultorio:</h3><!-- aqui utilizaremos una nueva etiqueta -->
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56496.00732472479!2d-64.28264342538706!3d-27.748131884343056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943b515f42ccf4d7%3A0xd029dfc5acb5ff5c!2sLa%20Banda%2C%20Santiago%20del%20Estero!5e0!3m2!1ses-419!2sar!4v1692583524548!5m2!1ses-419!2sar"
+                width="450" height="150" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+           </div>
+            <!-- iframe nos permite enlazar una partecita o fragmento de una pagina externa -->
+            <!-- En nuestro caso hemos usado el mapa de GOOGLEMAPS -->
+            <!-- Ahora continuamos con el formulario de contacto -->
+           
+            <form action="./enviados.html" method="post">
+                <!-- abrimos el formulario con la etiqueta form, esto indicara a nuestro codigo que lo que sigue contiene una estructura de formulario -->
+                <!-- el atributo action indica en que archivo plasmaremos los datos recibidos -->
+                <!-- el atributo method indica el medio que usaremos para enviar los datos, post en este caso enviara todo por medio de la url de nuestra pagina -->
+                <label for="nom" name="nombre" id="nombre">Nombre</label>
+                <!-- uno de los elementos del formulario es label, seria el texto que indica el nombre del campo a llenar -->
+                <input type="text" placeholder="Ingrese su Nombre" name="nom" id="nom"><!-- le siguiente elemento es input, la casilla o campo en donde entraremos los datos -->
+                <label for="mail" name="email" id="email">E-mail</label>
+                <input type="email" placeholder="Ingrese su E-mail" name="mail" id="mail">
+                <label for="msj" id="mensaje">Mensaje:</label> <!-- el atributo type indica el tipo de campo a llenar, puede ser un texto, un area de texto, un checklist, opciones multiples, etc -->
+                <textarea name="msj" id="msj" cols="30" rows="4" placeholder="Mensaje"></textarea>
+                <input class="bn" type="submit" value="Enviar"><!-- este type por ejemplo sirve para establecer un boton de enviar -->
+                   
+                </form> <!-- Aqui cerramos el formulario -->
+       
+        </section><!-- y nuestra ultima seccion -->
+        <!-- Por ultimo cerramos nuestro main, osea el contenido principal -->
+    </main>
+    <footer>
+        Diseñado por Valeria Viviana Soria Copyright 2023© <br>
+        <a href="./img/politicas.jpg">Politicas de Privacidad</a><!-- esta etiqueta sirve para el pie de pagina, aqui podemos poner derechos de autor, nombre del diseñador, dueño o la empresa, etc -->
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
