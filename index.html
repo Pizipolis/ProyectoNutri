@@ -1,79 +1,80 @@
-<!-- Primero que nada seleccionamos la estructura con la que vamos a trabajar colocando html:5 -->
+<!-- -------Inicio del establecimiento de la estructura y datos para el navegador -->
 
+<!-- Primero que nada seleccionamos la estructura con la que vamos a trabajar colocando html:5 -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <!-- Dentro de head ira toda esa informacion que interpreta el navegador pero que no se muestra al usuario, por ejemplo -->
+    <!-- Dentro de head ira toda esa informacion que interpreta el navegador pero que no se muestra al usuario, 
+    por ejemplo:-->
     <meta charset="UTF-8"> <!-- el grupo de caracteres que utilizaremos -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- caracteristicas del dispositivo objetivo -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- caracteristicas del dispositivo objetivo -->
     <title>Julian Nutricionista</title> <!-- Lo que se leera en la "solapa" (aunque esto si lo veremos ;) )-->
     <link rel="stylesheet" href="./style.css"> <!-- los links que necesitemos vincular a nuestro archivo -->
     <link rel="stylesheet" href="media.css">
 </head>
 
+<!-- ---------Fin de los datos -->
+<!-- ---------Comienzo del contenido -->
 <body>
     <!-- Aqui dentro irá el contenido de nuestro bello proyecto -->
-    <header>
+    <!-- -----------Inicio de Seccion Home -->
+    <header id="home" class="contenedor">
         <!-- Comenzamos nuestra estructura semantica, aqui podemos colocar lo que ira en el encabezado por ejemplo 
             publicidades, portadas, etc -->
-        <h1>Inicio</h1>
-        <!-- en mi caso colocare una imagen de un fondo texturado azul por medio de la etiqueta img -->
-        <!-- el atributo src indica la fuente o direccion de la imagen -->
-    </header>
-
-    <!-- Luego coloco la barra de navegacion, que dejare comentada porque quiero que aparezca oculta, lo manejare en js -->
-     <nav class="menuInicio">
-        <h3>Menu</h3> <!--  la barra de navegacion se estable por medio de esta etiqueta semantica-->
-        <ul> <!--en nuestro caso usaremos esta etiqueta que establece que seguira una lista-->
-            <li>Home</li> <!--con li colocaremos los elementos de esa lista-->
-            <li><a href="#sobreMi">Sobre Mi</a></li>
-            <li><a href="misServicios">Mis Servicios</a></li>
-            <li><a href="contactame">Contactame</a></li>
-        </ul>
-    </nav>
+        <h1 class="tituloSeccion">Inicio</h1>
+        <!-- en mi caso colocare una barra de inico color negro-->  
+        <!-- Aqui inserto una imagen dentro de un contenedor -->
+        <div class="logoCentral" id="cajaLogo">
+            <img src="./img/Logo.jpeg" alt="Logo de Julian Silva Nutricionista" id="logoMenu">
+            <!-- el atributo alt contiene un texto alternativo por si no funciona nuestra imagen :( -->
+        </div>
+        <!-- Luego coloco la barra de navegacion, que se encuetra oculta detras del logo -->
+        <nav class="menuInicio ocultar" id="menuCentral"><!--  la barra de navegacion se establece por medio 
+            de esta etiqueta semantica-->
+            <h3 id="clic">Menu</h3> 
+            <ul> <!--en nuestro caso usaremos esta etiqueta que establece que seguira una lista-->
+                <li>Home</li> <!--con li colocaremos los elementos de esa lista-->
+                <li><a href="#sobreMi">Sobre Mi</a></li>
+                <li><a href="#misServicios">Mis Servicios</a></li>
+                <li><a href="#contactame">Contactame</a></li>
+            </ul>
+        </nav>
+        <div class="excarrousel">
+            <!-- Este div encierra un conjunto de imagen y texto  -->
+            <img class="agenda" src="./img/hoja.jpg" alt="imagen de una hoja rayada">
+            <!-- aqui va una imagen de una hoja tipo agenda -->
+            <div class="textEncima"><!-- dentro de este div, encerre el texto que contiene una frase inspiradora -->
+                <h3>"El bienestar no es un destino, sino un proceso</h3><br><!-- esta etiqueta es para colocar 
+                un titulo pero no tan grande -->
+                <p>Consiste en como conduces, no a donde vas"</p> <!-- aqui iria el parrafo -->
+            </div>
+        </div>
     
+    </header>
+    
+    <!-- -----------Fin de seccion Home -->
+    <!---------------Inicia Seccion Sobre Mi -->
+
     <main>
-        <!-- Comenzamos nuestro contenido principal señalandolo por medio de la etiqueta main, el cual separare en secciones -->
-        <!-- home -->
-        <section> <!-- mi primera seccion contiene el menu oculto y unos tips -->
-            <div class="logoCentral">
-                <!-- la imagen la coloco en un div que usare como una caja contenedora para posteriormente agregarle estilos -->
-                <img src="./img/Logo.jpeg" alt="Logo de Julian Silva Nutricionista">
-                <!-- el atributo alt contiene un texto alternativo por si no funciona nuestra imagen :( -->
-            </div>
-            
-            <div class="carrousel">
-                <!-- como los tips son un conjunto de imagen y texto en un carrousel lo coloco dentro de un div contenedor -->
-                <img class="flecha1" src="./img/chevron-left-regular-24.png" alt="flecha izquierda">
-                <img class="agenda" src="./img/hoja.jpg" alt="imagen de una hoja rayada">
-                <!-- aqui va una imagen de una hoja tipo agenda -->
-                <div class="textEncima"><!-- dentro de este div, encerre el texto que contiene el tip -->
-                    <h3>Consejito del dia</h3><br><!-- esta etiqueta es para colocar un titulo pero no tan grande -->
-                    <p>Recordá beber al menos 2 1/2 L de agua por día</p> <!-- aqui iria el parrafo -->
-
-                </div>
-                <img class="flecha2" src="./img/chevron-right-regular-24.png" alt="flecha derecha">
-            </div>
-
-        </section><!-- aqui termina la primera seccion -->
+        <!-- Comenzamos nuestro contenido principal señalandolo por medio de la etiqueta main, 
+        el cual separare en secciones -->
         <!-- Sobre Mi -->
         <a name="sobreMi"></a>
         <section class="contenedor">
-            <div class="tituloSeccion"><!-- comienza la segunda seccion que en este caso es Sobre Mi, una descripcion de nuestro nutri -->
-            <h1>Sobre Mi</h1><!-- aqui colocamos un titulo un poco mas grande que el primero que pusimos -->
-            <!-- primero coloco una imagen del icono del menu -->
-            <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="1">
-                <div class="menu" >
+            <div class="tituloSeccion">
+                <h1>Sobre Mi</h1><!-- aqui colocamos un titulo un poco mas grande que el primero que pusimos -->
+                <!-- primero coloco una imagen del icono del menu seguido de una lista, la misma que usamos al-->
+                <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="1"> 
+                <div class="menu" id="menu">
                     <ul> 
-                        <li>Home</li> 
+                        <li><a href="#home">Home</a></li> 
                         <li>Sobre Mi</li>
-                        <li><a href="misServicios">Mis Servicios</a></li>
-                        <li><a href="contactame">Contactame</a></li>
+                        <li><a href="#misServicios">Mis Servicios</a></li>
+                        <li><a href="#contactame">Contactame</a></li>
                     </ul>
                 </div>
-            </div>    
+            </div>
+                <!-- Aqui coloco una imagen de julian -->
                 <img src="./img/juliancarnet.jpg" alt="Julian simpáticamente sentado " class="juli">
             <div class="parrafo">
                 <!-- comenzamos el contenido, separado en parrafos -->
@@ -90,61 +91,56 @@
                     para promover el bienestar general en la vida diaria enfocado a la salud y nutrición.</p>
 
             </div>
-            <!-- aqui termina la descripcion principañ, debajo coloco la imagen de Julian -->
-            <!-- ¿por que va debajo del texto la imagen? -->
-            <!-- porque recuerden que estamos hablando de etiquetas que se suceden una luego de la otra, entonces para poder 
-            colocar la imagen al costado primero tenemos que ordenar las estas etiquetas de manera eficiente -->
-
-
-
-            <!-- Al terminar la descripcion continuamos con la etiquetas de imagenes para dejar plasmado los titulos de nuestro profeional -->
            
         </section> <!-- terminamos la seccion Sobre mi, recuerden controlar el cierre de sus etiquetas -->
-        <!-- Mis Servicios -->
-        <a name="misServicios"></a>
+        
+        <!-- -------------Fin de seccion Sobre Mi -->
+        <!--------------- ---Inicia seccion Mis Servicios -->
+        <a name="misServicios"></a><!-- Con esta etiqueta de ancla vinculamos las secciones de nuestra pag con el menu -->
         <section class="contenedor"><!-- Aqui comenzamos la seccion de los servicios -->
             <div class="tituloSeccion">
                 <h1>Mis Servicios</h1><!-- utilizamos nuevamente el titulo mas grande -->
-            <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="2">
-            <div class="menu" id="menu2">
-                <ul>
-                    <li>Home</li> 
-                    <li><a href="#sobreMi">Sobre Mi</a></li>
-                    <li><a href="misServicios">Mis Servicios</a></li>
-                    <li><a href="contactame">Contactame</a></li>
-                </ul>
+                <img src="./img/menu-regular-24.png" alt="Icono de Menu Hamburguesa" class="iconBurguer" id="2">
+                <div class="menu" id="menu2">
+                    <ul>
+                        <li><a href="#home">Home</a></li> 
+                        <li><a href="#sobreMi">Sobre Mi</a></li>
+                        <li>Mis Servicios</li>
+                        <li><a href="#contactame">Contactame</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
             <div class="contenedor2">
                 <img class="imgIso" src="./img/doctor-9.png" alt="Imagen isometrica de consultorio">
-            <!-- otra imagen mas, asi vamos acostumbrandonos -->
+                <!-- otra imagen mas, asi vamos acostumbrandonos -->
             
-            <article>
-                <h2>Consultas Particulares</h2><br>
+                <article>
+                    <h2>Consultas Particulares</h2><br>
                 <!-- un titulo ni muy grande ni muy peque, repetiremos varias etiquetas vistas -->
-                <p>Puedes encontrarme todos los días en calle Donde Enchufa Nro 35, Ciudad de El Viento, Argentina de
-                    8:00hs
-                    a 13:00hs.</p>
-            </article>
-            <article>
-                <h2>Atención Virtual</h2><br>
-                <p>Todos los días, horarios semanales a acordar.</p>
-            </article>
-            <img class="imgIso" src="./img/coworking-a.png" alt="imagen isometrica de atencion virtual">
-            <img class="imgIso" src="./img/lunch-break-9.png" alt="Imagen isometrica de una agenda">
-            <article>
-                <h2>Planes Dietarios</h2><br>
-                <p>Especificos y ajustados a la necesidad y situación de cada paciente.</p>
-            </article>
-            <article>
-                <h2>Comunidades y grupos de apoyo</h2><br>
-                <p>En todas mis redes sociales y otras herramientas de colaboración digitales.</p>
-            </article>
-            <img class="imgIso" src="./img/macbook-1.png" alt="Imagen isometrica de Redes Sociales" class="imgMediana">
-        </div>
+                    <p>Puedes encontrarme todos los días en calle Donde Enchufa Nro 35, Ciudad de El Viento, Argentina de
+                    8:00hs a 13:00hs.</p>
+                </article>
+                <article>
+                    <h2>Atención Virtual</h2><br>
+                    <p>Todos los días, horarios semanales a acordar.</p>
+                </article>
+                <img class="imgIso" src="./img/coworking-a.png" alt="imagen isometrica de atencion virtual">
+                <img class="imgIso" src="./img/lunch-break-9.png" alt="Imagen isometrica de una agenda">
+                <article>
+                    <h2>Planes Dietarios</h2><br>
+                    <p>Especificos y ajustados a la necesidad y situación de cada paciente.</p>
+                </article>
+                <article>
+                    <h2>Comunidades y grupos de apoyo</h2><br>
+                    <p>En todas mis redes sociales y otras herramientas de colaboración digitales.</p>
+                </article>
+                <img class="imgIso" src="./img/macbook-1.png" alt="Imagen isometrica de Redes Sociales" class="imgMediana">
+            </div>
 
         </section> <!-- y aqui finaliamos nuevamente otra seccion -->
-        <!-- Contactame -->
+        
+        <!-- -----------Fin de seccion  -->
+        <!---------------Inicio Contactame -->
         <a name="contactame"></a>
         <section class="contenedor"><!-- iniciamos la ultima seccion, que sera de contacto -->
             <div class="tituloSeccion">
@@ -153,10 +149,10 @@
                 
                 <div id="menu3" class="menu">
                 <ul>
-                    <li>Home</li> 
+                    <li><a href="#home">Home</a></li> 
                     <li><a href="#sobreMi">Sobre Mi</a></li>
-                    <li><a href="misServicios">Mis Servicios</a></li>
-                    <li><a href="contactame">Contactame</a></li>
+                    <li><a href="#misServicios">Mis Servicios</a></li>
+                    <li>Contactame</li>
                 </ul>
                 </div>
             </div>
@@ -214,7 +210,7 @@
         Diseñado por Valeria Viviana Soria Copyright 2023© <br>
         <a href="./img/politicas.jpg">Politicas de Privacidad</a><!-- esta etiqueta sirve para el pie de pagina, aqui podemos poner derechos de autor, nombre del diseñador, dueño o la empresa, etc -->
     </footer>
-    <script src="./main.js"></script>
+    <script src="./main.js"></script> <!-- con esta etiqueta enlazamos nuesrto archivo js -->
 </body>
 
 </html>

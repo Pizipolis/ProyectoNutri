@@ -1,3 +1,6 @@
+
+/* ------------------------Reseteo CSS */
+
 /* Luego de crear nuestro archivo css procedemos a realizar lo que llamamos reseteo css */
 /* Este reseteo sirve para restablecer todos los estilos y que nuestro contenido parta desde 0 */
 *{
@@ -5,20 +8,41 @@
     padding: 0; /* el paddin es el espacio que se encuentra entre el margin y el contenido de la etiqueta */
 }
 
+/* ---------------------- */
 /* Podemos integrar nuestras modificaciones de estilos por medio de los selectores, en este caso usamos un selector de etiqueta */
+
+/* Aplico imagen de fondo al body, se verá en toda la pagina */
 body {
     background-image: url(./img/fondo.jpeg);
     background-size: 60%;
 }
 
+/* ------------------Inicia la Sección de Home */
+
+/* Agrego una posicion relativa, para luego ubicar el Menu de inicio en base al Header*/
+header{
+    position: relative;
+}
+
+/* Introduzco la propiedad de posicion absoluta y ubico el menu con top y left (ambos en base a Header)  */
 .menuInicio{
     position: absolute;
-    top: 25%;
-    left: 45%;
+    top: 30%;
+    left: 40%;
     text-align: center;
 
 }
 
+/* Especifico que el h3 que voy a modificar es el que se encuentra dentro del Menu, cambio el icono del flecha por el cursor de manito */
+/* ademas agrego un fondo negro a la etiqueta y un color de texto blanco */
+.menuInicio h3{
+    cursor: pointer;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
+/* Ahora pasamos a agregar estilos para quitar las viñetas a nuestra lista por medio de list-style-type */
 ul {
     list-style-type: none;
     text-align: center;
@@ -37,12 +61,17 @@ a{
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-.logoCentral { /* tambien podemos usar las clases, estas de escriben con un punto seguido del nombre que le asignamos nosotros */
-    width: 100%;
+
+/* El logo central tambien estara por encima del div "logoCentral" por lo que tambien colocare una posición relativa  */
+
+.logoCentral { 
+    width: 100%; /* para ocupar el ancho de la pantalla le agrego un width de 100% */
     text-align: center;
     position: relative;
 }
 
+/* Aqui agrego los estilos de la imagen para que se vea circular y se ubique en el centro
+esto lo hago con un border-radius y añadiendo un margen */
 .logoCentral img{
     border: 1px;
     border-style: solid;
@@ -50,46 +79,53 @@ a{
     width: 70%;
     margin-top: 10%;
     margin-bottom: 10%;
-    visibility: visible;
+    cursor: pointer;
 
 }
-.carrousel{
+/* Agregare una clase para ocultar el menu y que parezca que se encuentra detras del logo
+hidden significa oculto */
+
+.ocultar{
+    visibility: hidden;
+}
+
+/* Como no llegue a realizar el carrousel por cuestion de tiempo lo transforme en una imagen de una agenta 
+con una frase de contenido aqui paso nuevamente a añadir estilos a su div contenedor*/
+.excarrousel{
     position: relative;
     text-align: center;
     width: 100%;
+    background-color: #22c2cb;
 }
 
+/* luego a la imagen */
 .agenda{
     width: 100%;
 }
 
-.flecha1, .flecha2{
-    position: absolute;
-    top: 45%;
-    width: 30px;
-}
-
-.flecha2{
-   left: 95%;
-   
-}
+/* y al texto que va por encima de ella, otra vez utilizando propiedades de position */
 .textEncima {
     position: absolute;
     top: 30%;
     left: 25%;
     width: 50%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: small;
+    font-size: small; /* aqui incorporamos la letra que utilizamos y en que tamaño */
 }
 
+/* ----------------------Inicia la Seccion de Sobre mi */
+/* A partir de aqui incorporare una caja contenedora fexible para poder maquetar mejor mis secciones
+esto lo defino mediante display:flex, utilizando propiedades flexbox ubico el contenido general de esta caja contenedor
+en el centro  */
 .contenedor{
     display: flex;
     align-items:center;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* el wrap se utiliza para que la caja padre envuelva el contenido, es decir si el contenido es mas grande la caja se reubica */
     margin-top: 40px;
 }
 
+/* Establezco nuevamente una posicion relativa para que el menu se ubique en base a el titulo de cada seccion */
 .tituloSeccion{
     position: relative;
     width: 100%;
@@ -106,24 +142,27 @@ h1 {
 
 }
 
+/* Al menu lo coloco escondido por lo que utilizo un valor negativo para que pueda sobresalir de la pantalla y no se vea */
+/* incluyo una animacion por transicion para cuando lo llame con javascript */
 .menu{
     position: absolute;
     left: -250px; 
-    top: 60%;   
+    top: 80%;   
     background-color: #22c2cb;
     transition: 0.5s;
 
 }
 
+/* la siguiente clase la utilizare para que aparezca el menu desplazandose a su valor original */
 .activo {
     left: 0px;
 
 }
-
+/*  Este icono estara por encima del titulo de seccion por lo que tendra una posicion absoluta */
 .iconBurguer{
     position: absolute;
-    width: 25px;
-    top: 5%;
+    width: 20px;
+    top: 20%;
     left: 2%;
     margin-left: 5px;
     margin-right: 90%;
@@ -154,6 +193,10 @@ h1 {
     border-radius: 50%;
 }
 
+/* -------------------Fin de Seccion Sobre mi */
+
+
+/* -------------------Inicia Seccion Mis Servicios */
 .imgIso {
     width: 35%;
     border-radius: 30%;
@@ -177,6 +220,7 @@ article{
 
 }
 
+/* Aqui incorporamos las pseudoclasses y pseudoelementos, para elegir los elementos impares y pares del contenedor padre */
 article:nth-child(even){
     text-align:justify;
     border-radius: 20px;
@@ -193,7 +237,8 @@ article:nth-child(odd){
     background-color: white;
     border: 1px solid;
 }
-
+/* --------------------Fin de Seccion Mis SErvicios */
+/* --------------------Inicio Seccion Contactame */
 .redesContainer{
     width: 60%;
     display: flex;
@@ -258,6 +303,8 @@ input, textarea{
     cursor: pointer;
 }
 
+/* ---------Termina SEccion Contactame */
+/* Por ultimo agrego estilos al footer */
 footer{
     background-color: #22c3cba8;
     text-align: center;
